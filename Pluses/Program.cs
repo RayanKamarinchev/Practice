@@ -31,9 +31,9 @@ class Result
         int maxsize = 0;
         int[] maxPos = new int[2];
         int res = 1;
-        for (int i = 1; i < grid.Count-1; i++)
+        for (int i = 1; i < grid.Count - 1; i++)
         {
-            for (int j = 1; j < grid[i].Length-1; j++)
+            for (int j = 1; j < grid[i].Length - 1; j++)
             {
                 if (grid[i][j] == 'B' || grid[i][j] == 'P')
                 {
@@ -41,45 +41,66 @@ class Result
                 }
                 int x = i;
                 int y = j;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
+                    if (x == grid.Count - 1)
+                    {
+                        break;
+                    }
                     x++;
-                    if (x==grid.Count-1)
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
                     {
+                        x--;
                         break;
                     }
                 }
-                int size = x - i-1;
+                int size = x - i;
                 x = i;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
+                    if (x == 0)
+                    {
+                        break;
+                    }
+
                     x--;
-                    if (x == -1)
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
                     {
+                        x++;
                         break;
                     }
                 }
-                size = Math.Min(size, i-x-1);
+                size = Math.Min(size, i - x);
                 x = i;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
+                    if (y == grid[i].Length - 1)
+                    {
+                        break;
+                    }
                     y++;
-                    if (y == grid[i].Length)
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
                     {
+                        y--;
                         break;
                     }
                 }
-                size = Math.Min(size, y - j-1);
+                size = Math.Min(size, y - j);
                 y = j;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
-                    y--;
-                    if (y == -1)
+                    if (y == 0)
                     {
                         break;
                     }
+                    y--;
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
+                    {
+                        y++;
+                        break;
+                    }
                 }
-                size = Math.Min(size, j - y-1);
+                size = Math.Min(size, j - y);
                 if (size > maxsize)
                 {
                     maxsize = size;
@@ -114,45 +135,66 @@ class Result
                 }
                 int x = i;
                 int y = j;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
-                    x++;
                     if (x == grid.Count - 1)
                     {
                         break;
                     }
+                    x++;
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
+                    {
+                        x--;
+                        break;
+                    }
                 }
-                int size = x - i - 1;
+                int size = x - i;
                 x = i;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
+                    if (x == 0)
+                    {
+                        break;
+                    }
+
                     x--;
-                    if (x == -1)
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
                     {
+                        x++;
                         break;
                     }
                 }
-                size = Math.Min(size, i - x - 1);
+                size = Math.Min(size, i - x);
                 x = i;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
+                    if (y == grid[i].Length-1)
+                    {
+                        break;
+                    }
                     y++;
-                    if (y == grid[i].Length)
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
                     {
+                        y--;
                         break;
                     }
                 }
-                size = Math.Min(size, y - j - 1);
+                size = Math.Min(size, y - j);
                 y = j;
-                while (grid[x][y] != 'B' && grid[x][y] != 'P')
+                while (true)
                 {
-                    y--;
-                    if (y == -1)
+                    if (y == 0)
                     {
                         break;
                     }
+                    y--;
+                    if (grid[x][y] == 'B' || grid[x][y] == 'P')
+                    {
+                        y++;
+                        break;
+                    }
                 }
-                size = Math.Min(size, j - y - 1);
+                size = Math.Min(size, j - y);
                 if (size > maxsize)
                 {
                     maxsize = size;
@@ -170,7 +212,7 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+     //   TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
         string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
 
@@ -190,7 +232,7 @@ class Solution
 
         Console.WriteLine(result);
 
-        textWriter.Flush();
-        textWriter.Close();
+        //textWriter.Flush();
+        //textWriter.Close();
     }
 }
