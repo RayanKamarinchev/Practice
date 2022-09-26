@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongFactorial", "Learning\LongFactorial.csproj", "{4BD2C9D3-8625-425B-BAEE-E7F191F971C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongFactorial", "Learning\LongFactorial.csproj", "{4BD2C9D3-8625-425B-BAEE-E7F191F971C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluses", "Pluses\Pluses.csproj", "{2F04CFD7-3061-4582-97CF-FB26EDE1A8B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluses", "Pluses\Pluses.csproj", "{2F04CFD7-3061-4582-97CF-FB26EDE1A8B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicSquare", "MagicSquare\MagicSquare.csproj", "{E579BFEB-467D-41C0-9CE2-3A1BE72E5C18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2F04CFD7-3061-4582-97CF-FB26EDE1A8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F04CFD7-3061-4582-97CF-FB26EDE1A8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F04CFD7-3061-4582-97CF-FB26EDE1A8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E579BFEB-467D-41C0-9CE2-3A1BE72E5C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E579BFEB-467D-41C0-9CE2-3A1BE72E5C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E579BFEB-467D-41C0-9CE2-3A1BE72E5C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E579BFEB-467D-41C0-9CE2-3A1BE72E5C18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
